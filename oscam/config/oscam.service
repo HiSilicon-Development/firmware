@@ -3,11 +3,7 @@ Description=OSCam
 After=network.target
 
 [Service]
-Type=forking
-RuntimeDirectory=oscam
-RuntimeDirectoryMode=0755
-PIDFile=/run/oscam/oscam.pid
-ExecStart=/usr/local/bin/oscam -b -B /run/oscam/oscam.pid -c /usr/local/etc
+ExecStart=/usr/local/bin/oscam -c /usr/local/etc
 Restart=always
 RestartSec=5
 
